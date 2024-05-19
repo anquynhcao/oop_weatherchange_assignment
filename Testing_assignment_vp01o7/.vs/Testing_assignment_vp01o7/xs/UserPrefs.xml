@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{0A70D019-B440-46C5-AF28-B44B29658AE0}|Default">
+  <MonoDevelop.Ide.ItemProperties.Testing__assignment__vp01o7 PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Testing_assignment_vp01o7/UnitTest1.cs">
+    <Files>
+      <File FileName="Testing_assignment_vp01o7/UnitTest1.cs" Line="8" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Testing_assignment_vp01o7" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

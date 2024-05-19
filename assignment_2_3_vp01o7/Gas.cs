@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+
 namespace assignment_2_3_vp01o7
 {
     abstract class Gas
@@ -27,12 +30,29 @@ namespace assignment_2_3_vp01o7
 
         public bool Perished() { return thickness < 0.5; }
 
-        public abstract void React(IWeather weather, int index);
+        public void React(IWeather weather, int index, ref List<Gas> layers)
+        {
+            Gas g = this.Traverse(weather);
+            if (g != null)
+            {
+                //Atmosphere atm = Atmosphere.Instance();
+                //atm.adjustment(g, index);
+                for (int i = index + 1; i < layers.Count(); i++)
+                {
+                    if (!layers[i].Perished() && layers[i].type == g.type)
+                    {
+                        layers[i].AddThickness(g);
+                        return;
+                    }
+                }
+                layers.Add(g);
+            }
+        }
 
-        
+        public abstract Gas Traverse(IWeather weather);
+
+
     }   
-
-
 
     class Ozone : Gas
     {
@@ -40,14 +60,10 @@ namespace assignment_2_3_vp01o7
         {
             type = 'Z';
         }
-        public override void React(IWeather weather, int index)
+
+        public override Gas Traverse(IWeather weather)
         {
-            Gas g = weather.ChangeOzone(this);
-            if (g != null)
-            {
-                Atmosphere atm = Atmosphere.Instance();
-                atm.adjustment(g,index);
-            }
+            return weather.ChangeOzone(this);
         }
     }
 
@@ -59,14 +75,9 @@ namespace assignment_2_3_vp01o7
         {
             this.type = 'X';
         }
-        public override void React(IWeather weather, int index)
+        public override Gas Traverse(IWeather weather)
         {
-            Gas g = weather.ChangeOxygen(this);
-            if (g != null)
-            {
-                Atmosphere atm = Atmosphere.Instance();
-                atm.adjustment(g, index);
-            }
+            return weather.ChangeOxygen(this);
         }
     }
 
@@ -78,14 +89,9 @@ namespace assignment_2_3_vp01o7
         {
             this.type = 'C';
         }
-        public override void React(IWeather weather, int index)
+        public override Gas Traverse(IWeather weather)
         {
-            Gas g = weather.ChangeCO2(this);
-            if (g != null)
-            {
-                Atmosphere atm = Atmosphere.Instance();
-                atm.adjustment(g, index);
-            }
+            return weather.ChangeCO2(this);
         }
     }
 }

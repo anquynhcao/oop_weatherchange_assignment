@@ -1,4 +1,28 @@
 ﻿<Properties StartupConfiguration="{3DCEB57C-9E0E-4EE1-B1B4-D3241E41B023}|Default">
-  <MonoDevelop.Ide.ItemProperties.assignment__2__3__vp01o7 FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="assignment_2_3_vp01o7/input.txt">
+    <Files>
+      <File FileName="assignment_2_3_vp01o7/Program.cs" Line="39" Column="1" />
+      <File FileName="assignment_2_3_vp01o7/Weather.cs" Line="1" Column="1" />
+      <File FileName="assignment_2_3_vp01o7/Gas.cs" Line="1" Column="1" />
+      <File FileName="assignment_2_3_vp01o7/input.txt" Line="7" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="assignment_2_3_vp01o7" expanded="True">
+            <Node name="assignment_2_3_vp01o7">
+              <Node name="input.txt" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.assignment__2__3__vp01o7 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
